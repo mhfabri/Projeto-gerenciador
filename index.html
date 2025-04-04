@@ -381,9 +381,9 @@
     
     <script>
     // Verifica se o usuário fez login corretamente
-    if (sessionStorage.getItem("logado") !== "true") {
-        window.location.href = "login.html"; // Se não estiver logado, volta para a tela de login
-    }
+    //if (sessionStorage.getItem("logado") !== "true") {
+    //    window.location.href = "login.html"; // Se não estiver logado, volta para a tela de login
+    //}
 
     let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
     let estoque = JSON.parse(localStorage.getItem('estoque')) || [];
