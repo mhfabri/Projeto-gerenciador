@@ -1,46 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Gerenciamento de Clientes e Estoque</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-    const SUPABASE_URL = "SUA_URL_AQUI";
-    const SUPABASE_KEY = "SEU_ANON_KEY_AQUI";
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-    // Protege a página
-    async function verificarAcesso() {
-        const { data } = await supabase.auth.getSession();
-
-        if (!data.session && sessionStorage.getItem("logado") !== "true") {
-            window.location.href = "login.html";
-        }
-    }
-
-    verificarAcesso();
-</script>
     <div class="container">
         <h1>Gerenciamento de Clientes e Estoque</h1>
-
+        
         <div class="header">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Pesquisar cliente" oninput="pesquisarCliente()"
-                    onkeypress="handleKeyPress(event)">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <input type="text" id="searchInput" placeholder="Pesquisar cliente" oninput="pesquisarCliente()" onkeypress="handleKeyPress(event)">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
             </div>
             <button onclick="novoCliente()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
@@ -81,15 +58,7 @@
             </table>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        const supabase = supabase.createClient(
-            "SUA_URL_DO_SUPABASE",
-            "SEU_ANON_KEY"
-        );
-    </script>
-
-    <script src="assets/script.js"></script>
+    
+<script src="assets/script.js"></script>
 </body>
-
 </html>

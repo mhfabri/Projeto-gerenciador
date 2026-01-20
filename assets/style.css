@@ -1,5 +1,4 @@
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         :root {
             --primary: #2563eb;
@@ -45,6 +44,21 @@
             position: relative;
         }
         
+        #username, #password, .verify{
+            display: block;
+            margin: 10px auto;
+        }
+
+        #username, #password {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            max-width: 200px;
+            font-size: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
         h1 {
             color: white;
             text-align: center;
