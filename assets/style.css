@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    <style>
+
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         :root {
@@ -198,6 +194,89 @@
             font-style: italic;
         }
         
+        .selecao-produto {
+            display: none;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .selecao-produto select,
+        .selecao-produto input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .selecao-produto button {
+            padding: 10px 15px;
+        }
+        
+        .quantidade-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .quantidade-btn {
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .quantidade-input {
+            width: 50px;
+            text-align: center;
+        }
+        
+        .valor-total {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        .gasto-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin: 5px 0;
+        }
+        
+        .gasto-quantidade-container {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        
+        .gasto-quantidade-btn {
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gasto-quantidade-input {
+            width: 40px;
+            text-align: center;
+            padding: 2px;
+            margin: 0 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 4px;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -219,59 +298,23 @@
             
             button {
                 width: 100%;
-                
+            }
+            
+            .selecao-produto {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .selecao-produto select,
+            .selecao-produto input {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
 
-        #username, #password{
-            display: block;
-            text-align: center;
-            font-size: 120%;
-            margin: auto;
+        .search-activated {
+            transform: scale(0.98);
+            box-shadow: 0 0 5px rgba(6, 182, 212, 0.8);
+            transition: all 0.2s ease;
         }
-
-        .verify{
-            display: block;
-            margin: auto;
-            width: 20%;
-            font-size: 100%;
-            
-        }
-    </style>
-</head>
-<body>
-    <h1>Login</h1>
-    <input type="text" id="username" placeholder="Usuario">
-    <input type="password" id="password" placeholder="Senha">
-    <button class="verify" onclick="verificarLogin()">Entrar</button>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-    const SUPABASE_URL = "SUA_URL_AQUI";
-    const SUPABASE_KEY = "SEU_ANON_KEY_AQUI";
-
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-    async function verificarLogin() {
-        let email = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
-
-        const { data, error } = await supabase.auth.signInWithPassword({
-            email: email,
-            password: password
-        });
-
-        if (error) {
-            alert("Usuário ou senha incorretos!");
-            return;
-        }
-
-        // Guarda o login
-        sessionStorage.setItem("logado", "true");
-
-        window.location.href = "index.html";
-    }
-</script>
-
-</body>
-</html>
