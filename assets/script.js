@@ -1,17 +1,12 @@
-
-    // Verifica se o usuário fez login corretamente
-    if (sessionStorage.getItem("logado") !== "true") {
-        window.location.href = "login.html"; // Se não estiver logado, volta para a tela de login
-    }
+    // // // Verifica se o usuário fez login corretamente
+    // if (sessionStorage.getItem("logado") !== "true") {
+    //     window.location.href = "login.html"; // Se não estiver logado, volta para a tela de login
+    // }
+    // tem q arrumar essa prr pq ta dando refresh automatico sem para
 
     // Código para login js
     const usuarios = {
             "admin": "1234", // Exemplo de usuário e senha
-            "minhoca": "padoca0102",
-            "du":"senha2"
-            
-            
-            
         };
 
         function verificarLogin() {
@@ -25,6 +20,7 @@
                 alert("Usuario ou senha incorretos!");
             }
         }
+
 
 
     let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
@@ -533,7 +529,3 @@
     }
 
     exibirClientes();
-
-
-
-
