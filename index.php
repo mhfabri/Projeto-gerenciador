@@ -19,6 +19,7 @@ if (!isset($_SESSION['logado'])) {
         <h1>Gerenciamento de Clientes e Estoque</h1>
         
         <div class="header">
+
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Pesquisar cliente" oninput="pesquisarCliente()" onkeypress="handleKeyPress(event)">
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -35,6 +36,7 @@ if (!isset($_SESSION['logado'])) {
             </button>
             <button onclick="abastecerEstoque()">Adicionar Produto</button>
             <button onclick="toggleEstoque()">Ver Produtos</button>
+            <button onclick="window.location.href='logout.php'">Sair</button>
         </div>
 
         <!-- Tabela de clientes -->

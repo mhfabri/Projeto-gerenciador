@@ -17,10 +17,10 @@ if (isset($_SESSION['logado'])) {
     <h1>Login</h1>
 
     <form method="POST" action="auth.php">
-        <input type="text" name="username" placeholder="Usuario" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
+        <input id="username" type="text" name="username" placeholder="Usuario" required>
+        <input id="password" type="password" name="password" placeholder="Senha" required>
+        <button class="verify" type="submit">Entrar</button>
     </form>
-
+<script src="assets/script.js"></script>
 </body>
 </html>

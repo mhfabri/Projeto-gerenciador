@@ -5,21 +5,21 @@
     // tem q arrumar essa prr pq ta dando refresh automatico sem para
 
     // Código para login js
-    const usuarios = {
-            "admin": "1234", // Exemplo de usuário e senha
-        };
+    // const usuarios = {
+    //         "admin": "1234", // Exemplo de usuário e senha
+    //     };
 
-        function verificarLogin() {
-            let user = document.getElementById("username").value;
-            let pass = document.getElementById("password").value;
+    //     function verificarLogin() {
+    //         let user = document.getElementById("username").value;
+    //         let pass = document.getElementById("password").value;
 
-            if (usuarios[user] && usuarios[user] === pass) {
-                sessionStorage.setItem("logado", "true"); // Salva o login temporário
-                window.location.href = "index.html"; // Redireciona
-            } else {
-                alert("Usuario ou senha incorretos!");
-            }
-        }
+    //         if (usuarios[user] && usuarios[user] === pass) {
+    //             sessionStorage.setItem("logado", "true"); // Salva o login temporário
+    //             window.location.href = "index.html"; // Redireciona
+    //         } else {
+    //             alert("Usuario ou senha incorretos!");
+    //         }
+    //     }
 
 
 
